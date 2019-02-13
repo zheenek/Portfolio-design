@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    background-color: $main-pink;
+    overflow-x: hidden;
+    padding-top: 8.4rem;
+}

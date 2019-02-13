@@ -1,0 +1,42 @@
+.cross {
+    position: absolute;
+    bottom: 2.5rem; left: 50%;
+    width: 3rem;
+    height: 3rem;
+    -webkit-transform: translateX(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) rotate(45deg);
+    transform: translateX(-50%) rotate(45deg);
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #7E7E7E;
+        @include transition(background-color, .2s, ease);
+    }
+    
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #7E7E7E;
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        @include transition(background-color, .2s, ease);
+    }
+    
+    &:hover::before, &:hover::after {
+        background-color: $black;
+    }
+}

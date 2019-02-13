@@ -1,0 +1,17 @@
+.name {
+    position: fixed;
+    top: 50%; right: -1%;
+    display: block;
+    color: #000;
+    font-size: 1.8rem;
+    text-decoration: none;
+    @include rotate(90deg);
+    font-family: "Helvetica Neue";
+    font-weight: 500;
+    @include respond(tablet) {display: none;}
+    @include transition(color,.3s,ease);
+    
+    &:hover {
+        color: #7e7e7e;
+    }
+}

@@ -1,0 +1,63 @@
+.content {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+
+    @include respond(tablet) {
+        width: 90%;
+    }
+    
+    &__container {
+        position: relative;
+        width: calc(50% - .8rem);
+        margin-bottom: 1.6rem;
+        height: auto;
+        @include respond(phone) {
+            width: 100%;
+        }
+        
+        &__img {
+            width: 100%;
+        }
+        
+        &__name {
+            position: absolute;
+            width: 100%;
+            bottom: .3rem; left: 0;
+            padding: 1.4rem 0;
+            text-align: center;
+            background-color: rgba($black, .75);
+            color: #fff;
+            font-family: $Akzidenz, sans-serif;
+            font-weight: 300;
+            letter-spacing: .1rem;
+            font-size: 1.6rem;
+            opacity: 0;
+            transition: opacity .3s ease-out;
+        }
+        
+        &:hover &__name {
+            opacity: 1;
+        }
+        
+        &--wide {
+            width: 100%;
+        }
+    }
+}
+
+.row {
+    width: 100%;
+    margin: 0 auto;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    @include respond(phone) {
+        flex-wrap: wrap;
+    }
+}

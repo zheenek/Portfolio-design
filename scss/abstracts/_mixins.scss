@@ -1,0 +1,33 @@
+@mixin rotate($val) {
+    -webkit-transform: rotate($val);
+    -ms-transform: rotate($val);
+    transform: rotate($val);
+}
+
+@mixin transition($prop, $time, $fn) {
+    -webkit-transition: $prop $time $fn;
+    -o-transition: $prop $time $fn;
+    transition: $prop $time $fn;
+}
+
+@mixin centering($x, $y) {
+    -webkit-transform: translate($x, $y);
+    -ms-transform: translate($x, $y);
+    transform: translate($x, $y);
+}
+
+@mixin centering-x($x) {
+    -webkit-transform: translateX($x);
+    -ms-transform: translateX($x);
+    transform: translateX($x);
+}
+
+@mixin respond($arg) {
+    @if $arg == phone {
+        @media (max-width: 37.5em) {@content;}
+    }
+    
+    @if $arg == tablet {
+        @media (max-width: 56.25em) {@content;}
+    }
+}

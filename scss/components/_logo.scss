@@ -1,0 +1,9 @@
+.logo {
+    display: block;
+    width: 4.5rem;
+    position: fixed;
+    bottom: 3.5rem; left: 3%;
+    @include respond(tablet) {
+        display: none;
+    }
+}
